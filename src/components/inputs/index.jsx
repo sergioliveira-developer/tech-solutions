@@ -1,16 +1,11 @@
-import PropTypes from 'prop-types';
-
+import { ButtonIcon } from '../button-icon';
 import { ContainerInput } from './styles';
 
-export function Input({ children, ...props }) {
+export const Input = function ({ ...props }) {
   return (
     <ContainerInput>
-      {children}
-      <input type="search" {...props}></input>
+      <input {...props} />
+      <ButtonIcon />
     </ContainerInput>
   );
-}
-
-Input.propTypes = {
-  children: PropTypes.node.isRequired,
 };

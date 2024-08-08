@@ -1,12 +1,13 @@
+
+import { createBrowserRouter } from 'react-router-dom';
+
 import { Home } from './Screens/Home';
 
-import GlobalStyles from './styles/globalStyles';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+]);
 
-export function App() {
-  return (
-    <>
-      <GlobalStyles />
-      <Home />
-    </>
-  );
-}
+export default router;

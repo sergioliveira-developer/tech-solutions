@@ -3,9 +3,9 @@ import { styled } from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 1.5rem;
-  padding: 2rem;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5.5rem;
 
   h3 {
     font-size: 1rem;
@@ -35,15 +35,13 @@ export const Container = styled.div`
     color: #fff;
     width: 28.5rem;
     height: 3rem;
-  }
 
-  /* &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    height: 0;
-    width: 10.1875rem;
-    background-color: #fff;
-  } */
+    img {
+      width: 1.375rem;
+      height: 1.375rem;
+      position: relative;
+      top: 0.25rem;
+      margin-right: 0.25rem;
+    }
+  }
 `;

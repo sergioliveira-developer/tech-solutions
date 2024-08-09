@@ -4,8 +4,7 @@ import { theme } from '../../styles/theme';
 export const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: self-start;
+  justify-content: space-between;
   background-color: ${theme.colors.darkpurple};
   padding: 2rem;
   height: 100vh;
@@ -16,7 +15,7 @@ export const TopContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   gap: 6rem;
-  padding: 2rem;
+  padding: 1rem;
 `;
 
 export const Header = styled.header`
@@ -24,7 +23,6 @@ export const Header = styled.header`
   gap: 2rem;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0 0;
 
   a {
     display: flex;
@@ -41,3 +39,12 @@ export const Header = styled.header`
     }
   }
 `;
+
+export const SectionInformations = styled.section`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+`;
+

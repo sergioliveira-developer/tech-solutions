@@ -25,7 +25,7 @@ export const ContainerInput = styled.div`
     transition: all 100ms;
 
     &:focus {
-      border-color: ${theme.colors.white};
+      border-color: ${theme.colors.light};
     }
 
     &::placeholder {

@@ -3,36 +3,41 @@ import { Input } from '../../components/inputs';
 import { BagIcon } from '../../components/bag-icon';
 import { InformationContainer } from '../../components/containerInfo';
 import { DesignerImg } from '../../components/images';
+import { Button } from '../../components/buttons';
 
 import UserExperience from '../../assets/user-experience.svg';
 import Star from '../../assets/Star.svg';
+import ArrowForward from '../../assets/arrow-forward.svg';
+import Explore from '../../assets/explore.svg';
 
 import {
   ContainerMain,
-  TopContainer,
   Header,
   SectionInformations,
+  ContainerImage,
 } from './styles';
 
 export function Home() {
   return (
-    <ContainerMain>
-      <TopContainer>
-        <Header>
+    <>
+      <Header>
+        <div>
           <a>Home</a>
           <a>Catalog</a>
           <a>Contact</a>
           <a>Features</a>
-        </Header>
+        </div>
 
         <Logo />
 
-        <Input placeholder="Search games & products.." />
+        <div>
+          <Input placeholder="Search games & products.." />
 
-        <BagIcon />
-      </TopContainer>
+          <BagIcon />
+        </div>
+      </Header>
 
-      
+      <ContainerMain>
         <SectionInformations>
           <InformationContainer
             title="Experience a new dimension of reality"
@@ -40,11 +45,22 @@ export function Home() {
             src={Star}
             text=" Step into the future with our virtual headset, come to life right before your eyes"
           />
-          <DesignerImg src={UserExperience} />
+
+          <div>
+            <Button theme="blue">
+              Visit Sttore <img src={ArrowForward} />
+            </Button>
+
+            <Button>
+              <img src={Explore} /> Explore
+            </Button>
+          </div>
         </SectionInformations>
 
-        
-      
-    </ContainerMain>
+        <ContainerImage>
+          <DesignerImg src={UserExperience} />
+        </ContainerImage>
+      </ContainerMain>
+    </>
   );
 }

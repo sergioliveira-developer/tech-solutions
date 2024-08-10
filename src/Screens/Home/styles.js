@@ -2,14 +2,24 @@ import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
+import Background from '../../assets/background.svg';
+
+
 export const ContainerMain = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: ${theme.colors.darkpurple};
-  background-size: cover;
   padding: 2rem;
-  min-height: 100vh;
+  height: 100vh;
+`;
+
+export const TopContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6rem;
+  padding: 1rem;
 `;
 
 export const Header = styled.header`
@@ -43,20 +53,9 @@ export const Header = styled.header`
 
 export const SectionInformations = styled.section`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1.5rem;
-  padding: 1rem;
 
-
-  div {
-    display: flex;
-    padding: 1rem;
-    gap: 1.5rem;
-  }
 `;
 
-export const ContainerImage = styled.div`
-  display: flex;
-  justify-content: space-around;
-`;

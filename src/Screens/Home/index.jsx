@@ -6,7 +6,7 @@ import { DesignerImg } from '../../components/images';
 import { Button } from '../../components/buttons';
 
 import UserExperience from '../../assets/user-experience.svg';
-import Star from '../../assets/Star.svg';
+import Star from '../../assets/star.svg';
 import ArrowForward from '../../assets/arrow-forward.svg';
 import Explore from '../../assets/explore.svg';
 
@@ -21,19 +21,12 @@ export function Home() {
   return (
     <>
       <Header>
-<<<<<<< HEAD
         <div>
           <a>Home</a>
           <a>Catalog</a>
           <a>Contact</a>
           <a>Features</a>
         </div>
-=======
-        <a>Home</a>
-        <a>Catalog</a>
-        <a>Contact</a>
-        <a>Features</a>
->>>>>>> 168da290bc52b5974687edf923e73dd9464bfb93
 
         <Logo />
 
@@ -54,11 +47,11 @@ export function Home() {
           />
 
           <div>
-            <Button theme="blue">
+            <Button theme="blue" type="button">
               Visit Sttore <img src={ArrowForward} />
             </Button>
 
-            <Button>
+            <Button type="button">
               <img src={Explore} /> Explore
             </Button>
           </div>

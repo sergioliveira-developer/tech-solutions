@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 3rem;
+  padding: 2rem;
 
   h3 {
     font-size: 1rem;

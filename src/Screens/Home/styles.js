@@ -4,22 +4,15 @@ import { theme } from '../../styles/theme';
 
 import Background from '../../assets/background.svg';
 
-
 export const ContainerMain = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
   background-color: ${theme.colors.darkpurple};
-  padding: 2rem;
-  height: 100vh;
-`;
-
-export const TopContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 6rem;
-  padding: 1rem;
+  background-image: url(${Background});
+  background-size: cover;
+  padding: 5rem;
+  min-height: 100vh;
 `;
 
 export const Header = styled.header`
@@ -28,6 +21,7 @@ export const Header = styled.header`
   align-items: center;
   background-color: ${theme.colors.darkpurple};
   padding: 2rem;
+  width: 100%;
 
   a {
     display: flex;
@@ -53,9 +47,20 @@ export const Header = styled.header`
 
 export const SectionInformations = styled.section`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem;
+  width: 100%;
 
+  div {
+    display: flex;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
 `;
 
+export const ContainerImage = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 2rem;
+`;

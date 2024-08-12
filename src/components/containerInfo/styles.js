@@ -4,8 +4,6 @@ import { theme } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 2rem;
 
   h3 {
     font-size: 1rem;
@@ -13,8 +11,6 @@ export const Container = styled.div`
     line-height: auto;
     letter-spacing: 6%;
     color: ${theme.colors.white};
-    width: 10.1875rem;
-    height: 1.375rem;
   }
 
   h1 {
@@ -29,12 +25,12 @@ export const Container = styled.div`
 
   p {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
     color: ${theme.colors.white};
-    width: 28.5rem;
-    height: 3rem;
+    width: 29rem;
+    height: 2.5rem;
 
     img {
       width: 1.375rem;

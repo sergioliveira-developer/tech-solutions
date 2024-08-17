@@ -29,8 +29,8 @@ export const Container = styled.div`
     line-height: 150%;
     letter-spacing: 0%;
     color: ${theme.colors.white};
-    width: 29rem;
-    height: 2.5rem;
+    width: 30rem;
+    height: 2.6rem;
 
     img {
       width: 1.375rem;

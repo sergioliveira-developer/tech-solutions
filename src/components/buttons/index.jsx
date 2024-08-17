@@ -11,6 +11,7 @@ export function Button({ children, theme, ...props }) {
 }
 
 Button.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node.isRequired,
   theme: PropTypes.string,
+  
 };

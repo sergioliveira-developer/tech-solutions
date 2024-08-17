@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { Container } from './styles';
 
-export function InformationContainer({ title, subtitle, text, src, ...props }) {
+export function InformationTop({ title, subtitle, text, src, ...props }) {
   return (
     <Container {...props}>
       <h3>{subtitle}</h3>
@@ -14,7 +14,7 @@ export function InformationContainer({ title, subtitle, text, src, ...props }) {
   );
 }
 
-InformationContainer.propTypes = {
+InformationTop.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   text: PropTypes.string,

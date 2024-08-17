@@ -19,7 +19,7 @@ export const Header = styled.header`
     font-weight: 400;
     line-height: auto;
     letter-spacing: 0%;
-    color: #fff;
+    color: ${theme.colors.white};
 
     &:hover {
       color: ${theme.colors.error};
@@ -37,6 +37,7 @@ export const Header = styled.header`
 
 export const ContainerMain = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 0 2rem;
@@ -45,17 +46,17 @@ export const ContainerMain = styled.div`
 
 export const SectionInformations = styled.section`
   display: flex;
-  justify-content: space-around;
   background-image: url(${Background});
-  width: 120rem;
-  height: 42.5rem;
-  padding: 0 2rem;
+  padding: 2rem;
+  width: 100%;
+  height: 42.69rem;
 `;
 
-export const ContainerBody = styled.div`
+export const ContainerTop = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
   padding: 2rem;
 
   > div {
@@ -68,7 +69,6 @@ export const ContainerBody = styled.div`
 export const ContainerImage = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   width: 100%;
 `;
 
@@ -79,8 +79,7 @@ export const ContainerSocial = styled.div`
   width: 100%;
 
   strong {
-    width: 5.625rem;
-    height: 1.1875rem;
+    padding: 0.25rem;
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 8%;
@@ -99,10 +98,173 @@ export const IconsGroup = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2.75rem;
-    height: 2.75rem;
+    padding: 0.625rem;
     border: 1px solid ${theme.colors.white};
     border-radius: 0.25rem;
     color: ${theme.colors.white};
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.5s ease-in-out;
+    }
+  }
+`;
+
+export const SectionDescription = styled.section`
+  display: flex;
+  gap: 5rem;
+  padding: 1rem;
+  width: 100%;
+`;
+
+export const ContainerBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -2%;
+    color: ${theme.colors.white};
+    text-align: left;
+  }
+`;
+
+export const DescriptionProduct = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  column-gap: 5rem;
+  width: 100%;
+
+  div {
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    row-gap: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: ${theme.colors.white};
+    width: 100%;
+
+    img {
+      width: 1.375rem;
+      height: 1.375rem;
+      position: relative;
+      top: 0;
+    }
+  }
+`;
+
+export const GamingCreate = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+`;
+
+export const GamingCreator = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 130%;
+    letter-spacing: -2%;
+    color: ${theme.colors.white};
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: ${theme.colors.white};
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.15rem;
+    line-height: auto;
+    letter-spacing: 0%;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.25rem;
+    color: ${theme.colors.lightblue};
+    background-color: ${theme.colors.darkblue};
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.5s ease-in-out;
+    }
+  }
+`;
+
+export const TopGames = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${theme.colors.darkpurple};
+  padding: 2rem 1rem;
+  width: 100%;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: -2%;
+    color: ${theme.colors.white};
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    color: ${theme.colors.white};
+
+    span {
+      color: ${theme.colors.lightblue};
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 0.25rem;
+
+    button {
+      background-color: ${theme.colors.darkblue};
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .arrow-left {
+    transform: rotate(180deg);
   }
 `;

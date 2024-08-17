@@ -7,10 +7,9 @@ export const Buttons = styled.button`
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  padding: 1rem 1.5rem;
   background-color: ${(props) =>
     props.theme === 'blue' ? theme.colors.lightblue : 'transparent'};
-  width: ${(props) => (props.theme === 'blue' ? '11.5rem' : '9.0625rem')};
-  height: 3.5rem;
   color: ${(props) =>
     props.theme === 'blue' ? theme.colors.dark : theme.colors.white};
   border-radius: 0.25rem;
@@ -24,5 +23,6 @@ export const Buttons = styled.button`
 
   &:hover {
     opacity: 0.6;
+    transition: 0.5s ease-in-out;
   }
 `;

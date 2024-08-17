@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "yarn build",
+    "build": "vite build",
+    "install": "npm install",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

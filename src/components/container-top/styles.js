@@ -4,40 +4,53 @@ import { theme } from '../../styles/theme';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   h3 {
-    font-size: 1rem;
+    position: absolute;
+    left: 256px;
+    top: 174px;
+    font-style: normal;
     font-weight: 500;
-    line-height: auto;
-    letter-spacing: 6%;
-    color: ${theme.colors.white};
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   h1 {
-    font-size: 5rem;
+    position: absolute;
+    width: 630px;
+    height: 288px;
+    left: 256px;
+    top: 228px;
+    font-style: normal;
     font-weight: 700;
+    font-size: 80px;
     line-height: 120%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
     color: ${theme.colors.white};
-    width: 39.375rem;
-    height: 18rem;
+  }
+
+  img {
+    width: 1.375rem;
+    height: 1.375rem;
+    position: absolute;
+    left: 256px;
+    top: 556px;
   }
 
   p {
-    font-size: 1rem;
+    position: absolute;
+    width: 456px;
+    height: 48px;
+    left: 290px;
+    top: 556px;
+    font-style: normal;
     font-weight: 500;
+    font-size: 16px;
     line-height: 150%;
-    letter-spacing: 0%;
-    color: ${theme.colors.white};
-    width: 30rem;
-    height: 2.6rem;
-
-    img {
-      width: 1.375rem;
-      height: 1.375rem;
-      position: relative;
-      top: 0.25rem;
-      margin-right: 0.25rem;
-    }
+    color: rgba(255, 255, 255, 0.8);
   }
 `;

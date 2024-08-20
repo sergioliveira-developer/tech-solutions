@@ -9,24 +9,23 @@ export default createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     cursor: pointer;
+    outline: none;
   }
 
   body,input, button {
     font-family: 'Satoshi', sans-serif;
   }
 
-  h1, h3, p, button,  input {
-    line-height: 100%;
+  body {
+    background-color: ${theme.colors.darkpurple};
+    -webkit-font-smoothing: antialiased;
   }
 
-  body {
-    -webkit-font-smoothing: antialiased;
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 4614px;
     background-color: ${theme.colors.darkpurple};
   }
 
-  #root  {
-    max-width: 120rem;
-    height: 4614px;
-    margin: 0 auto;
-  }
 `;

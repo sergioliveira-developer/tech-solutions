@@ -14,12 +14,16 @@ export const Buttons = styled.button`
     props.theme === 'blue' ? theme.colors.dark : theme.colors.white};
   border-radius: 0.25rem;
   border: ${(props) =>
-    props.theme === 'blue' ? 'none' : '1px ${theme.colors.white}'};
+    props.theme === 'blue' ? 'none' : '1px solid rgba(255, 255, 255, 0.2)'};
+  box-shadow: 0px 20px 49px rgba(61, 222, 237, 0.17);
   font-size: 1.125rem;
   font-weight: 500;
   line-height: auto;
   text-align: center;
   letter-spacing: 0%;
+  position: absolute;
+  left: ${(props) => (props.theme === 'blue' ? '257px' : '465px')};
+  top: 644px;
 
   &:hover {
     opacity: 0.6;

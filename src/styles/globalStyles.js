@@ -23,8 +23,8 @@ export default createGlobalStyle`
 
   #root {
     position: relative;
-    width: 1920px;
-    height: 4614px;
+    width: 120rem;
+    max-height: 100rem;
     background-color: ${theme.colors.darkpurple};
   }
 

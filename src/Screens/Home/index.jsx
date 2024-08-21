@@ -3,7 +3,7 @@ import { Input } from '../../components/inputs';
 import { BagIcon } from '../../components/bag-icon';
 import { InformationTop } from '../../components/container-top';
 import { Button } from '../../components/buttons';
-import { useWindowSizeIcons } from '../../components/windowSizeIcons';
+import { SocialMedia } from '../../components/social-media';
 import { PageCardsGames } from '../PageCards';
 
 import IsolationMode from '../../assets/isolation-mode.svg';
@@ -22,25 +22,16 @@ import {
   ContainerMain,
   SectionInformations,
   ContainerTop,
-  ContainerSocial,
-  IconsGroup,
   SectionDescription,
   ContainerBody,
   GamingCreator,
   GamingCreate,
   TopGames,
+  Footer,
+  ContainerGlasses,
 } from './styles';
 
-import {
-  IoLogoTwitter,
-  IoLogoInstagram,
-  IoLogoDiscord,
-  IoLogoFacebook,
-} from 'react-icons/io5';
-
 export function Home() {
-  const { width } = useWindowSizeIcons();
-  const iconSize = width > 768 ? 24 : 24;
   return (
     <>
       <ContainerMain>
@@ -78,26 +69,7 @@ export function Home() {
               </Button>
             </div>
 
-            <ContainerSocial>
-              <strong>FOLLOW US</strong>
-              <IconsGroup>
-                <div className="twitter">
-                  <IoLogoTwitter size={iconSize} />
-                </div>
-
-                <div className="instagram">
-                  <IoLogoInstagram size={iconSize} />
-                </div>
-
-                <div className="discord">
-                  <IoLogoDiscord size={iconSize} />
-                </div>
-
-                <div className="facebook">
-                  <IoLogoFacebook size={iconSize} />
-                </div>
-              </IconsGroup>
-            </ContainerSocial>
+            <SocialMedia />
           </ContainerTop>
 
           <img
@@ -108,64 +80,61 @@ export function Home() {
         </SectionInformations>
 
         <SectionDescription>
+          <h1>
+            Our Virtual Headsets
+            <br />
+            Shine with Unique
+            <br />
+            Features!
+          </h1>
           <ContainerBody>
-            <h1>
-              Our Virtual Headsets
+            <div className="high-resolution">
+              <img src={BlueStar} />
+              High-resolution OLED or LCD screens:
               <br />
-              Shine with Unique
+              Provide sharp and clear visuals.
+            </div>
+
+            <div className="refresh-rate">
+              <img src={BlueStar} />
+              Refresh rate: Higher refresh rates reduce
               <br />
-              Features!
-            </h1>
+              motion sickness and provide.
+            </div>
 
-            <div className="description">
-              <div className="high-resolution">
-                High-resolution OLED or LCD screens:
-                <br />
-                Provide sharp and clear visuals.
-                <img src={BlueStar} />
-              </div>
+            <div className="inside-tracking">
+              <img src={BlueStar} />
+              Inside-out tracking: Built-in sensors
+              <br />
+              (cameras or other sensors).
+            </div>
 
-              <div className="refresh-rate">
-                Refresh rate:
-                <br />
-                Higher refresh rates reduce motion sickness and provide.
-                <img src={BlueStar} />
-              </div>
+            <div className="eye-tracking">
+              <img src={BlueStar} />
+              Eye tracking: Monitors the movement of
+              <br />
+              the users eyes, allowing for more.
+            </div>
 
-              <div className="inside-tracking">
-                Inside-out tracking:
-                <br />
-                Built-in sensors (cameras or other sensors).
-                <img src={BlueStar} />
-              </div>
+            <div className="high-resolution1">
+              <img src={BlueStar} />
+              High-resolution OLED or LCD screens:
+              <br />
+              Provide sharp and clear visuals.
+            </div>
 
-              <div className="eye-tracking">
-                Eye tracking:
-                <br />
-                Monitors the movement of the users eyes, allowing for more.
-                <img src={BlueStar} />
-              </div>
-
-              <div className="high-resolution1">
-                High-resolution OLED or LCD screens:
-                <br />
-                Provide sharp and clear visuals.
-                <img src={BlueStar} />
-              </div>
-
-              <div className="refresh-rate1">
-                Refresh rate:
-                <br />
-                Higher refresh rates reduce motion sickness and provide.
-                <img src={BlueStar} />
-              </div>
+            <div className="refresh-rate1">
+              <img src={BlueStar} />
+              Refresh rate: Higher refresh rates
+              <br />
+              reduce motion sickness and provide.
             </div>
           </ContainerBody>
-
-          <div className="glasses">
-            <img src={Glasses} />
-          </div>
         </SectionDescription>
+
+        <ContainerGlasses>
+          <img src={Glasses} />
+        </ContainerGlasses>
 
         <GamingCreate>
           <GamingCreator>
@@ -214,7 +183,46 @@ export function Home() {
             </button>
           </div>
         </TopGames>
+
         <PageCardsGames />
+
+        <Footer>
+          <div className="container-contact">
+            <Logo />
+
+            <label>'(+351)939274154'</label>
+          </div>
+
+          <div className="container-header">
+            <h3>Menu</h3>
+            <a>Home</a>
+            <a>Catalog</a>
+            <a>Contact</a>
+            <a>Features</a>
+          </div>
+
+          <div className="container-company">
+            <h3>Company</h3>
+            <a>Login</a>
+            <a>Sign Up</a>
+            <a>Privacy</a>
+            <a>Products</a>
+          </div>
+
+          <div className="container-newcastle">
+            <h3>Subscribe Our News Letter</h3>
+            <p>
+              Sure, please provide your email address to
+              <br />
+              subscribe to newsletter
+            </p>
+
+            <div className="subscribe">
+              <input type="text" placeholder="Enter your mail..." />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </Footer>
       </ContainerMain>
     </>
   );

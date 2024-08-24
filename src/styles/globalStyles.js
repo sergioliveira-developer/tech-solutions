@@ -22,10 +22,9 @@ export default createGlobalStyle`
   }
 
   #root {
-    position: relative;
-    width: 120rem;
-    max-height: 100rem;
-    background-color: ${theme.colors.darkpurple};
+    max-width: 120rem;
+    margin: 0 auto;
+    
   }
 
 `;

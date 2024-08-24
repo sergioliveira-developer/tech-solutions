@@ -5,12 +5,14 @@ import { theme } from '../../styles/theme';
 export const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  max-width: 120rem;
+  width: 100%;
 `;
 
 export const SectionInformations = styled.section`
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   .background {
     position: absolute;
@@ -67,9 +69,9 @@ export const Header = styled.header`
 
   .logo {
     position: absolute;
-    width: 104px;
+    width: 98px;
     height: 28px;
-    left: calc(50% - 104px / 2);
+    left: 908px;
     top: 57px;
   }
 `;
@@ -87,26 +89,19 @@ export const ContainerTop = styled.div`
   }
 `;
 
-export const ContainerImage = styled.div`
-  display: flex;
-  align-items: flex-start;
-`;
-
 export const SectionDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
   padding: 0px;
   gap: 40px;
   position: absolute;
-  width: 688px;
-  height: 467px;
+  width: 100%;
   left: 976px;
   top: 975px;
 
   h1 {
-    width: 688px;
-    height: 219px;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -122,17 +117,16 @@ export const SectionDescription = styled.div`
 
 export const ContainerBody = styled.div`
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: row;
   padding: 0px;
   gap: 32px;
-  width: 688px;
-  height: 208px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
   img {
     width: 1.375rem;
@@ -141,10 +135,8 @@ export const ContainerBody = styled.div`
 
   .high-resolution {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -155,10 +147,8 @@ export const ContainerBody = styled.div`
 
   .refresh-rate {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -169,10 +159,8 @@ export const ContainerBody = styled.div`
 
   .inside-tracking {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -183,9 +171,8 @@ export const ContainerBody = styled.div`
 
   .eye-tracking {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    order: 3;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -196,9 +183,8 @@ export const ContainerBody = styled.div`
 
   .high-resolution1 {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    order: 4;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -209,9 +195,8 @@ export const ContainerBody = styled.div`
 
   .refresh-rate1 {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
-    order: 5;
-    flex-grow: 0;
     font-size: 1rem;
     font-weight: 500;
     line-height: 150%;
@@ -227,6 +212,10 @@ export const ContainerGlasses = styled.div`
   height: 486px;
   left: 273px;
   top: 947px;
+
+  /* img {
+    box-shadow: 0px 10px 49px rgba(203, 0, 221, 0.2);
+  } */
 `;
 
 export const GamingCreate = styled.div`
@@ -367,119 +356,114 @@ export const TopGames = styled.div`
 `;
 
 export const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+  gap: 10.5rem;
   position: absolute;
-  width: 1920px;
-  height: 484px;
-  left: 50px;
-  top: 4210px;
+  padding: 5.1875rem 16.3125rem 4.8125rem 16rem;
+  width: 100%;
+  max-width: 120rem;
+  left: 245px;
+  top: 4127px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  border-radius: 0.5rem;
 
   .container-contact {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    width: 168px;
-    height: 128px;
-    left: 256px;
-    top: 4210px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    color: ${theme.colors.white};
+
+    .social-media {
+      display: flex;
+      gap: 1.5rem;
+      color: ${theme.colors.white};
+
+      div {
+        padding: 0.25rem;
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
   }
 
   .container-header {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    width: 59px;
-    height: 208px;
-    left: 642px;
-    top: 4210px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    color: ${theme.colors.white};
   }
 
   .container-company {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    width: 82px;
-    height: 209px;
-    left: 919px;
-    top: 4210px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    color: ${theme.colors.white};
   }
 
-  .container-newcastle {
+  .container-newsletter {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    color: ${theme.colors.white};
 
-    h3 {
-      position: absolute;
-      width: 225px;
-      height: 24px;
-      left: 1216px;
-      top: 4210px;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
-      color: ${theme.colors.white};
-    }
-
-    p {
-      position: absolute;
-      width: 448px;
-      height: 44px;
-      left: 1216px;
-      top: 4258px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 22px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .subscribe {
+    .container-subscribe {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      padding: 12px 24px;
+      padding: 0 0 0 1.5rem;
+      gap: 9.5rem;
       border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0.25rem;
 
       input {
-        box-sizing: border-box;
-        gap: 10px;
-        position: absolute;
-        padding: 1.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.625rem;
+        color: ${theme.colors.purple};
+        border: none;
         background: none;
-        left: 1216px;
-        top: 4342px;
-        border-radius: 0.25rem;
+        filter: drop-shadow(0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+
+        &::placeholder {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          line-height: 1.375rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
       }
 
       button {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1.375rem 1.82rem;
-        gap: 0.625rem;
-        position: absolute;
-        left: 1530px;
-        top: 4342px;
-        background-color: ${theme.colors.lightblue};
-        border-radius: 0px 4px 4px 0px;
+        padding: 1.375rem 1.8125rem;
+        background: ${theme.colors.lightblue};
+        border: none;
+        border-radius: 0px 0.25rem 0.25rem 0px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.375rem;
+        box-shadow: 0px 20px 49px rgba(61, 222, 237, 0.17);
+        color: ${theme.colors.darkpurple};
+
+        &:hover {
+          opacity: 0.6;
+          transition: 0.5s ease-in-out;
+        }
       }
     }
   }

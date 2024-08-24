@@ -5,6 +5,7 @@ export const ButtonSource = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.75rem 1.5rem;
   background: none;
   border: none;
   color: ${theme.colors.white};

@@ -5,6 +5,7 @@ import { InformationTop } from '../../components/container-top';
 import { Button } from '../../components/buttons';
 import { SocialMedia } from '../../components/social-media';
 import { PageCardsGames } from '../PageCards';
+import { QuestionBoard } from '../../components/questions';
 
 import IsolationMode from '../../assets/isolation-mode.svg';
 import UserExperience from '../../assets/user-experience.svg';
@@ -16,6 +17,13 @@ import BlueStar from '../../assets/blue-star.svg';
 import PeoplesViews from '../../assets/peoples-views.svg';
 import People from '../../assets/people.svg';
 // import Coments from '../../assets/coments.svg';
+
+import {
+  IoLogoTwitter,
+  IoLogoInstagram,
+  IoLogoDiscord,
+  IoLogoFacebook,
+} from 'react-icons/io5';
 
 import {
   Header,
@@ -88,46 +96,50 @@ export function Home() {
             Features!
           </h1>
           <ContainerBody>
-            <div className="high-resolution">
-              <img src={BlueStar} />
-              High-resolution OLED or LCD screens:
-              <br />
-              Provide sharp and clear visuals.
+            <div>
+              <div className="high-resolution">
+                <img src={BlueStar} />
+                High-resolution OLED or LCD screens:
+                <br />
+                Provide sharp and clear visuals.
+              </div>
+
+              <div className="inside-tracking">
+                <img src={BlueStar} />
+                Inside-out tracking: Built-in sensors
+                <br />
+                (cameras or other sensors).
+              </div>
+
+              <div className="refresh-rate">
+                <img src={BlueStar} />
+                Refresh rate: Higher refresh rates reduce
+                <br />
+                motion sickness and provide.
+              </div>
             </div>
 
-            <div className="refresh-rate">
-              <img src={BlueStar} />
-              Refresh rate: Higher refresh rates reduce
-              <br />
-              motion sickness and provide.
-            </div>
+            <div>
+              <div className="high-resolution1">
+                <img src={BlueStar} />
+                High-resolution OLED or LCD screens:
+                <br />
+                Provide sharp and clear visuals.
+              </div>
 
-            <div className="inside-tracking">
-              <img src={BlueStar} />
-              Inside-out tracking: Built-in sensors
-              <br />
-              (cameras or other sensors).
-            </div>
+              <div className="eye-tracking">
+                <img src={BlueStar} />
+                Eye tracking: Monitors the movement of
+                <br />
+                the users eyes, allowing for more.
+              </div>
 
-            <div className="eye-tracking">
-              <img src={BlueStar} />
-              Eye tracking: Monitors the movement of
-              <br />
-              the users eyes, allowing for more.
-            </div>
-
-            <div className="high-resolution1">
-              <img src={BlueStar} />
-              High-resolution OLED or LCD screens:
-              <br />
-              Provide sharp and clear visuals.
-            </div>
-
-            <div className="refresh-rate1">
-              <img src={BlueStar} />
-              Refresh rate: Higher refresh rates
-              <br />
-              reduce motion sickness and provide.
+              <div className="refresh-rate1">
+                <img src={BlueStar} />
+                Refresh rate: Higher refresh rates
+                <br />
+                reduce motion sickness and provide.
+              </div>
             </div>
           </ContainerBody>
         </SectionDescription>
@@ -186,11 +198,31 @@ export function Home() {
 
         <PageCardsGames />
 
+        <QuestionBoard />
+
         <Footer>
           <div className="container-contact">
             <Logo />
 
-            <label>'(+351)939274154'</label>
+            <div className="social-media">
+              <div>
+                <IoLogoTwitter />
+              </div>
+
+              <div>
+                <IoLogoInstagram />
+              </div>
+
+              <div>
+                <IoLogoDiscord />
+              </div>
+
+              <div>
+                <IoLogoFacebook />
+              </div>
+            </div>
+
+            <label>+351 939274154</label>
           </div>
 
           <div className="container-header">
@@ -209,19 +241,23 @@ export function Home() {
             <a>Products</a>
           </div>
 
-          <div className="container-newcastle">
+          <div className="container-newsletter">
             <h3>Subscribe Our News Letter</h3>
             <p>
-              Sure, please provide your email address to
+              Sure, please provide your email address to subscribe to
               <br />
-              subscribe to newsletter
+              newsletter
             </p>
 
-            <div className="subscribe">
+            <div className="container-subscribe">
               <input type="text" placeholder="Enter your mail..." />
               <button>Subscribe</button>
             </div>
           </div>
+
+          {/* <div className="rights reserved">
+            <p> © 2023 Your Company Name. All rights reserved.</p>
+          </div> */}
         </Footer>
       </ContainerMain>
     </>

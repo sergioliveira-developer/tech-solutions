@@ -18,13 +18,11 @@ export const ContainerInput = styled.div`
     height: 22px;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.375rem;
     background: none;
     border: none;
     color: ${theme.colors.purple};
-    flex: none;
-    order: 0;
     flex-grow: 1;
     transition: all 100ms;
 

@@ -218,22 +218,34 @@ export const ContainerGlasses = styled.div`
   } */
 `;
 
-export const GamingCreate = styled.div`
+export const GamingCreation = styled.div`
   display: flex;
   padding: 1rem;
   width: 100%;
 
-  .create {
-    box-sizing: border-box;
-    position: absolute;
-    width: 688px;
-    height: 540px;
-    left: 976px;
-    top: 1603px;
+  div {
+    .creater {
+      position: absolute;
+      width: 688px;
+      height: 540px;
+      left: 976px;
+      top: 1603px;
+      z-index: -1;
+    }
+
+    .coments {
+      position: absolute;
+      width: 414px;
+      height: 282px;
+      left: 908px;
+      top: 1945px;
+      box-shadow: 0px 0.33px 0px #ced5dc;
+      border-radius: 8px;
+    }
   }
 `;
 
-export const GamingCreator = styled.div`
+export const GameCreator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -275,6 +287,7 @@ export const GamingCreator = styled.div`
     padding: 1rem 1.5rem;
     gap: 1.5rem;
     background: rgba(50, 116, 248, 0.12);
+    border: none;
     border-radius: 0.25rem;
     order: 2;
     flex-grow: 0;
@@ -284,74 +297,11 @@ export const GamingCreator = styled.div`
     line-height: 1.5rem;
     text-align: center;
     color: ${theme.colors.lightblue};
-    order: 0;
-    flex-grow: 0;
 
     &:hover {
       opacity: 0.6;
       transition: 0.5s ease-in-out;
     }
-  }
-`;
-
-export const TopGames = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  h1 {
-    position: absolute;
-    left: 256px;
-    top: 2420px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 130%;
-    letter-spacing: -0.02em;
-    color: ${theme.colors.white};
-  }
-
-  p {
-    position: absolute;
-    top: 2433px;
-    left: 814px;
-    font-style: normal;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: left;
-    color: ${theme.colors.white};
-
-    span {
-      color: ${theme.colors.lightblue};
-    }
-  }
-
-  .container-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: absolute;
-    top: 2429px;
-    left: 1538px;
-
-    button {
-      background: rgba(50, 116, 248, 0.12);
-      padding: 1rem;
-      border-radius: 0.5rem;
-      border: none;
-
-      &:hover {
-        opacity: 0.6;
-        transition: 0.5s ease-in-out;
-      }
-    }
-  }
-
-  .arrow-left {
-    transform: rotate(180deg);
   }
 `;
 

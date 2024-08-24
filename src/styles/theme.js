@@ -10,6 +10,5 @@ export const theme = {
     lightpurple: '#BF23F5',
     neutral: '#BEAFC3',
     darkpurple: '#0F041C',
-    black: '#04141C',
   },
 };

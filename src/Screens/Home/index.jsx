@@ -16,7 +16,7 @@ import Glasses from '../../assets/glasses.svg';
 import BlueStar from '../../assets/blue-star.svg';
 import PeoplesViews from '../../assets/peoples-views.svg';
 import People from '../../assets/people.svg';
-// import Coments from '../../assets/coments.svg';
+import Coments from '../../assets/coments.svg';
 
 import {
   IoLogoTwitter,
@@ -32,11 +32,10 @@ import {
   ContainerTop,
   SectionDescription,
   ContainerBody,
-  GamingCreator,
-  GamingCreate,
-  TopGames,
-  Footer,
   ContainerGlasses,
+  GamingCreation,
+  GameCreator,
+  Footer,
 } from './styles';
 
 export function Home() {
@@ -148,8 +147,8 @@ export function Home() {
           <img src={Glasses} />
         </ContainerGlasses>
 
-        <GamingCreate>
-          <GamingCreator>
+        <GamingCreation>
+          <GameCreator>
             <h1>
               Jane Wilson,
               <br />
@@ -169,32 +168,13 @@ export function Home() {
             </button>
 
             <img src={PeoplesViews} />
-          </GamingCreator>
+          </GameCreator>
 
-          <div className="create">
-            <img src={People} />
+          <div>
+            <img className="creater" src={People} alt="game creater" />
+            <img className="coments" src={Coments} alt="people-coments" />
           </div>
-        </GamingCreate>
-
-        <TopGames>
-          <h1>Top Games</h1>
-
-          <p>
-            If you buy video 2 games, you will receive 1
-            <br />
-            video game for free, along with a <span>50%</span> discount.
-          </p>
-
-          <div className="container-buttons">
-            <button>
-              <img className="arrow-left" src={ArrowForward2} />
-            </button>
-
-            <button>
-              <img src={ArrowForward2} />
-            </button>
-          </div>
-        </TopGames>
+        </GamingCreation>
 
         <PageCardsGames />
 

@@ -8,9 +8,6 @@ export const ContainerSocial = styled.div`
   width: 100%;
 
   strong {
-    position: absolute;
-    left: 256px;
-    top: 740px;
     font-style: normal;
     font-weight: 700;
     font-size: 0.875rem;
@@ -31,10 +28,7 @@ export const IconsGroup = styled.div`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    position: absolute;
     padding: 0.625rem;
-    left: 257px;
-    top: 771px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
     color: ${theme.colors.white};
@@ -50,10 +44,7 @@ export const IconsGroup = styled.div`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    position: absolute;
     padding: 0.625rem;
-    left: 313px;
-    top: 771px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
 
@@ -70,10 +61,7 @@ export const IconsGroup = styled.div`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    position: absolute;
     padding: 0.625rem;
-    left: 369px;
-    top: 771px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
     color: ${theme.colors.white};
@@ -89,13 +77,9 @@ export const IconsGroup = styled.div`
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    position: absolute;
     padding: 0.625rem;
-    left: 425px;
-    top: 771px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
-
     color: ${theme.colors.white};
 
     &:hover {

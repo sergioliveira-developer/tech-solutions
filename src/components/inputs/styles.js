@@ -7,9 +7,6 @@ export const ContainerInput = styled.div`
   align-items: center;
   padding: 0.75rem 1.5rem;
   gap: 1rem;
-  position: absolute;
-  left: 1274px;
-  top: 48px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0.25rem;
 

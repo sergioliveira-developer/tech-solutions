@@ -4,69 +4,67 @@ import { theme } from '../../styles/theme';
 
 export const ContainerGames = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  p {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 130%;
-    letter-spacing: -2%;
-    text-align: left;
-    color: ${theme.colors.white};
-  }
+  .cards-games {
+    display: flex;
+    gap: 48px;
+    width: 100%;
 
-  span {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 130%;
-    letter-spacing: -2%;
-    color: #bd00ff;
-  }
+    .horizon {
+      max-width: 448px;
+      height: 519px;
 
-  .horizon {
-    position: absolute;
-    width: 448px;
-    height: 519px;
-    left: 256px;
-    top: 2557px;
-
-    &:hover {
-      scale: 1.1;
+      &:hover {
+        scale: 1.1;
+      }
     }
-  }
 
-  .ajax {
-    position: absolute;
-    width: 448px;
-    height: 519px;
-    left: 756px;
-    top: 2557px;
+    .ajax {
+      max-width: 448px;
+      height: 519px;
 
-    &:hover {
-      scale: 1.1;
+      span {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 130%;
+        letter-spacing: -2%;
+        color: #bd00ff;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
     }
-  }
 
-  .fight-night {
-    position: absolute;
-    width: 448px;
-    height: 518px;
-    left: 1256px;
-    top: 2558px;
+    .fight-night {
+      max-width: 448px;
+      height: 518px;
 
-    &:hover {
-      scale: 1.1;
+      &:hover {
+        scale: 1.1;
+      }
     }
-  }
 
-  .call-of-duty {
-    position: absolute;
-    width: 448px;
-    height: 519px;
-    left: 1756px;
-    top: 2557px;
+    .call-of-duty {
+      max-width: 448px;
+      height: 519px;
 
-    &:hover {
-      scale: 1.1;
+      /* &:hover {
+        scale: 1.1;
+      } */
+    }
+
+    p {
+      max-width: 448px;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 130%;
+      letter-spacing: -2%;
+      text-align: left;
+      color: ${theme.colors.white};
     }
   }
 `;
@@ -75,11 +73,9 @@ export const TopGames = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 80px 0;
 
   h1 {
-    position: absolute;
-    left: 256px;
-    top: 2420px;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -89,11 +85,8 @@ export const TopGames = styled.div`
   }
 
   p {
-    position: absolute;
-    top: 2433px;
-    left: 814px;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0%;
@@ -102,7 +95,7 @@ export const TopGames = styled.div`
 
     span {
       font-style: normal;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 400;
       line-height: 150%;
       letter-spacing: 0%;
@@ -114,14 +107,11 @@ export const TopGames = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    position: absolute;
-    top: 2429px;
-    left: 1538px;
+    gap: 16px;
 
     button {
       background: rgba(50, 116, 248, 0.12);
-      padding: 1rem;
+      padding: 16px;
       border-radius: 0.5rem;
       border: none;
 

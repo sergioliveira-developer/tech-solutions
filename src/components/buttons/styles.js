@@ -21,9 +21,6 @@ export const Buttons = styled.button`
   line-height: auto;
   text-align: center;
   letter-spacing: 0%;
-  position: absolute;
-  left: ${(props) => (props.theme === 'blue' ? '257px' : '465px')};
-  top: 644px;
 
   &:hover {
     opacity: 0.6;

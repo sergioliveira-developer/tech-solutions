@@ -6,10 +6,9 @@ export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    outline: none;
+   
     box-sizing: border-box;
-    cursor: pointer;
-    outline: none;
+ 
   }
 
   body,input, button {
@@ -22,7 +21,7 @@ export default createGlobalStyle`
   }
 
   #root {
-    max-width: 120rem;
+    max-width: 1920px;
     margin: 0 auto;
     
   }

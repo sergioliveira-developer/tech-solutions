@@ -14,11 +14,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 150px;
     height: 73px;
-    left: 860px;
-    top: 3208px;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -33,9 +30,6 @@ export const Container = styled.div`
     justify-content: flex-start;
     gap: 12.75rem;
     padding: 2rem 2.5rem;
-    position: absolute;
-    left: 496px;
-    top: 3333px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     text-align: left;
@@ -59,9 +53,6 @@ export const Container = styled.div`
     justify-content: flex-start;
     gap: 1.5rem;
     padding: 1.875rem 2.5625rem 2.125rem 2.4375rem;
-    position: absolute;
-    left: 496px;
-    top: 3452px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     text-align: left;
@@ -100,9 +91,6 @@ export const Container = styled.div`
     justify-content: flex-start;
     gap: 13.625rem;
     padding: 2rem 2.5rem;
-    position: absolute;
-    left: 496px;
-    top: 3784px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     text-align: left;
@@ -125,9 +113,6 @@ export const Container = styled.div`
     justify-content: flex-start;
     gap: 16.875rem;
     padding: 2rem 2.5rem;
-    position: absolute;
-    left: 496px;
-    top: 3903px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     text-align: left;

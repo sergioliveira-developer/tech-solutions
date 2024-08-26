@@ -2,7 +2,6 @@ import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const ContainerBag = styled.button`
-  position: absolute;
   left: 1642px;
   top: 60px;
   background: none;

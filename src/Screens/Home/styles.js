@@ -5,29 +5,56 @@ import { theme } from '../../styles/theme';
 export const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 120rem;
+  max-width: 1400px;
   width: 100%;
+  padding: 0 12px;
+  z-index: 2;
 `;
 
 export const SectionInformations = styled.section`
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
-
-  .background {
-    position: absolute;
-    width: 1920px;
-    height: 796px;
-    left: 3px;
-    top: 43px;
-  }
+  background: url('./isolation-mode.svg') no-repeat center;
+  background-size: cover;
 
   .glasses-using {
-    position: absolute;
-    width: 995px;
-    height: 636px;
-    left: 902px;
-    top: 177px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+
+      img {
+        &:hover {
+          opacity: 0.6;
+          transition: 0.5s ease-in-out;
+        }
+      }
+
+      div,
+      span {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 27px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
   }
 `;
 
@@ -35,20 +62,14 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
-  padding: 2rem;
-  width: 100%;
+  gap: 24px;
+  padding: 56px 0;
 
   .links {
     display: flex;
     align-items: flex-start;
     padding: 0px;
     gap: 32px;
-    position: absolute;
-    width: 309px;
-    height: 30px;
-    left: 256px;
-    top: 56px;
 
     a {
       display: flex;
@@ -68,76 +89,110 @@ export const Header = styled.header`
   }
 
   .logo {
-    position: absolute;
     width: 98px;
     height: 28px;
-    left: 908px;
-    top: 57px;
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
   }
 `;
 
 export const ContainerTop = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   width: 100%;
-  padding: 2rem;
+  padding: 72px 0;
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
   .container-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 12px;
   }
 `;
 
 export const SectionDescription = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0px;
-  gap: 40px;
-  position: absolute;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  left: 976px;
-  top: 975px;
 
-  h1 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 130%;
-    letter-spacing: -0.02em;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    color: ${theme.colors.white};
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    position: relative;
+    z-index: -1;
+  }
+
+  .elipse {
+      width: 100%;
+      max-width: 700px;
+      position: absolute;
+      left: 300px;
+      top: 700px;
+      /* background: rgba(83, 0, 112, 0.5); */
+      filter: blur(229px);
+      transform: rotate(128.9deg);
   }
 `;
 
 export const ContainerBody = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0px;
-  gap: 32px;
+  gap: 40px;
   width: 100%;
+  max-width: 704px;
 
-  div {
+  h1 {
+    max-width: 570px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: ${theme.colors.white};
+  }
+
+  .infos {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+
+    div {
+      flex-basis: calc(100% / 2 - 12px);
+    }
   }
 
   img {
-    width: 1.375rem;
-    height: 1.375rem;
+    width: 22px;
+    height: 22px;
   }
 
   .high-resolution {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
@@ -147,7 +202,6 @@ export const ContainerBody = styled.div`
 
   .refresh-rate {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
     font-size: 1rem;
     font-weight: 500;
@@ -159,9 +213,8 @@ export const ContainerBody = styled.div`
 
   .inside-tracking {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
@@ -171,9 +224,8 @@ export const ContainerBody = styled.div`
 
   .eye-tracking {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
@@ -183,9 +235,8 @@ export const ContainerBody = styled.div`
 
   .high-resolution1 {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
@@ -195,9 +246,8 @@ export const ContainerBody = styled.div`
 
   .refresh-rate1 {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    font-size: 1rem;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0%;
@@ -206,41 +256,42 @@ export const ContainerBody = styled.div`
   }
 `;
 
-export const ContainerGlasses = styled.div`
-  position: absolute;
-  width: 522px;
-  height: 486px;
-  left: 273px;
-  top: 947px;
-
-  /* img {
-    box-shadow: 0px 10px 49px rgba(203, 0, 221, 0.2);
-  } */
-`;
-
 export const GamingCreation = styled.div`
   display: flex;
-  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
   width: 100%;
 
-  div {
-    .creater {
-      position: absolute;
-      width: 688px;
-      height: 540px;
-      left: 976px;
-      top: 1603px;
-      z-index: -1;
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .creater {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    /* box-shadow: 0px 10px 10px rgba(203, 0, 221, 0.2); */
+
+    .people {
+      width: 100%;
+      max-width: 700px;
     }
 
     .coments {
       position: absolute;
-      width: 414px;
-      height: 282px;
-      left: 908px;
-      top: 1945px;
-      box-shadow: 0px 0.33px 0px #ced5dc;
-      border-radius: 8px;
+      max-width: 416px;
+      left: -30px;
+      bottom: -40px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     }
   }
 `;
@@ -249,15 +300,10 @@ export const GameCreator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
-  gap: 2.5rem;
-  position: absolute;
-  width: 568px;
-  height: 435px;
-  left: 256px;
-  top: 1697px;
+  gap: 40px;
 
   h1 {
+    max-width: 425px;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -275,8 +321,6 @@ export const GameCreator = styled.div`
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    order: 0;
-    flex-grow: 0;
     color: ${theme.colors.white};
   }
 
@@ -284,17 +328,15 @@ export const GameCreator = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1.5rem;
-    gap: 1.5rem;
+    padding: 16px 24px;
+    gap: 24px;
     background: rgba(50, 116, 248, 0.12);
     border: none;
-    border-radius: 0.25rem;
-    order: 2;
-    flex-grow: 0;
+    border-radius: 4px;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
+    font-size: 18px;
+    line-height: 24px;
     text-align: center;
     color: ${theme.colors.lightblue};
 
@@ -309,7 +351,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   gap: 10.5rem;
-  position: absolute;
+
   padding: 5.1875rem 16.3125rem 4.8125rem 16rem;
   width: 100%;
   max-width: 120rem;

@@ -5,6 +5,7 @@ import {
   Input,
   Logo,
   SocialMedia,
+  QuestionBoard,
 } from '../../components';
 
 import {
@@ -96,7 +97,7 @@ export function Home() {
           <div className="content">
             <div className="image">
               <img src={Glasses} />
-              <img className='elipse' src={Elipse} alt="box-shadow" />
+              {/* <img className="elipse" src={Elipse} alt="box-shadow" /> */}
             </div>
 
             <ContainerBody>
@@ -174,9 +175,9 @@ export function Home() {
 
       <PageCardsGames />
 
-      {/*<QuestionBoard />
+      <QuestionBoard />
 
-        <Footer>
+      {/*<Footer>
           <div className="container-contact">
             <Logo />
 

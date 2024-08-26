@@ -30,10 +30,8 @@ export const Container = styled.div`
       color: ${theme.colors.white};
 
       img {
-        width: 1.375rem;
-        height: 1.375rem;
-        position: relative;
-        top: 0.25rem;
+        width: 22px;
+        height: 22px;
       }
     }
   }

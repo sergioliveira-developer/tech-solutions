@@ -139,19 +139,7 @@ export const SectionDescription = styled.div`
     width: 100%;
     max-width: 700px;
     height: auto;
-    position: relative;
     z-index: -1;
-  }
-
-  .elipse {
-      width: 100%;
-      max-width: 700px;
-      position: absolute;
-      left: 300px;
-      top: 700px;
-      /* background: rgba(83, 0, 112, 0.5); */
-      filter: blur(229px);
-      transform: rotate(128.9deg);
   }
 `;
 

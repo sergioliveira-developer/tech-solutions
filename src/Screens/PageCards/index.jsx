@@ -38,24 +38,24 @@ export const PageCardsGames = () => {
         </TopGames>
 
         <div className="cards-games">
-          <div className="horizon">
-            <img src={Horizon} />
-            <p>Horizon : Call of the mountain</p>
+          <div>
+            <img className="horizon" src={Horizon} />
+            <h2>Horizon : Call of the mountain</h2>
           </div>
 
-          <div className="ajax">
-            <img src={Ajax} />
+          <div>
+            <img className="ajax" src={Ajax} />
             <span>Half - Life : ALYX</span>
           </div>
 
-          <div className="fight-night">
-            <img src={FightNight} />
-            <p>Fight Night : Champion</p>
+          <div>
+            <img className="fight-night" src={FightNight} />
+            <h2>Fight Night : Champion</h2>
           </div>
 
-          <div className="call-of-duty">
-            <img src={CallofDuty} />
-            <p>Call of Duty</p>
+          <div>
+            <img className="call-of-duty" src={CallofDuty} />
+            <h2>Call of Duty : Cold War</h2>
           </div>
         </div>
       </ContainerMain>

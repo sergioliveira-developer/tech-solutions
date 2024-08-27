@@ -15,49 +15,63 @@ export const ContainerGames = styled.div`
 
     .horizon {
       max-width: 448px;
-      height: 519px;
+      height: auto;
+      border-radius: 4px;
 
       &:hover {
-        scale: 1.1;
+        opacity: 0.8;
+        border: 3px solid rgba(189, 0, 255, 0.2);
+        transition: all 100ms;
       }
     }
 
-    .ajax {
-      max-width: 448px;
-      height: 519px;
-
+    div {
       span {
         font-weight: 700;
         font-size: 32px;
         line-height: 130%;
         letter-spacing: -2%;
-        color: #bd00ff;
+        color: ${theme.colors.purpledark};
       }
 
-      &:hover {
-        scale: 1.1;
+      .ajax {
+        max-width: 448px;
+        height: auto;
+        border-radius: 4px;
+
+        &:hover {
+          opacity: 0.8;
+          border: 3px solid ${theme.colors.purpledark};
+          transition: all 100ms;
+        }
       }
     }
 
     .fight-night {
       max-width: 448px;
-      height: 518px;
+      height: auto;
+      border-radius: 4px;
 
       &:hover {
-        scale: 1.1;
+        opacity: 0.8;
+        border: 3px solid rgba(189, 0, 255, 0.2);
+        transition: all 100ms;
       }
     }
 
     .call-of-duty {
       max-width: 448px;
-      height: 519px;
+      height: auto;
+      border-radius: 4px;
 
-      /* &:hover {
-        scale: 1.1;
-      } */
+      &:hover {
+        opacity: 100%;
+        border: 3px solid rgba(189, 0, 255, 0.2);
+        transition: all 100ms;
+      }
     }
 
-    p {
+    h2 {
       max-width: 448px;
       font-weight: 700;
       font-size: 32px;

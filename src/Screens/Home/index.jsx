@@ -12,6 +12,7 @@ import {
   ContainerBody,
   ContainerMain,
   ContainerTop,
+  Footer,
   GameCreator,
   GamingCreation,
   Header,
@@ -30,7 +31,8 @@ import Glasses from '../../assets/glasses.png';
 import PeoplesViews from '../../assets/peoples-views.svg';
 import Creator from '../../assets/creator.png';
 import Coments from '../../assets/coments.svg';
-import Elipse from '../../assets/elipse.svg';
+import Line3 from '../../assets/line-3.svg';
+import Line4 from '../../assets/line-4.svg';
 
 import { PageCardsGames } from '../PageCards';
 
@@ -71,20 +73,27 @@ export function Home() {
                 </Button>
               </div>
 
-              <SocialMedia />
+              <div className="follow-us">
+                <strong>FOLLOW US</strong>
+                <SocialMedia />
+              </div>
             </div>
 
             <div className="glasses-using">
-              <img src={UserExperience} />
+              <div className='user-experience'>
+                <img src={UserExperience} />
+                <img src={Line3} alt="line3" />
+              </div>
+
               <div className="icons">
                 <div>
                   <img src={EnhancedEducation} alt="icon" />
-                  <span>EnhancedEducation</span>
+                  <span>Enhanced Education</span>
                 </div>
 
                 <div>
                   <img src={TrainingSimulation} alt="icon" />
-                  <span>TrainingSimulation</span>
+                  <span>Training and Simulation</span>
                 </div>
               </div>
             </div>
@@ -177,27 +186,12 @@ export function Home() {
 
       <QuestionBoard />
 
-      {/*<Footer>
+      <Footer>
+        <div className="footer">
           <div className="container-contact">
             <Logo />
 
-            <div className="social-media">
-              <div>
-                <IoLogoTwitter />
-              </div>
-
-              <div>
-                <IoLogoInstagram />
-              </div>
-
-              <div>
-                <IoLogoDiscord />
-              </div>
-
-              <div>
-                <IoLogoFacebook />
-              </div>
-            </div>
+            <SocialMedia />
 
             <label>+351 939274154</label>
           </div>
@@ -220,23 +214,23 @@ export function Home() {
 
           <div className="container-newsletter">
             <h3>Subscribe Our News Letter</h3>
+
             <p>
-              Sure, please provide your email address to subscribe to
-              <br />
-              newsletter
+              Sure, please provide your email address to subscribe to newsletter
             </p>
 
             <div className="container-subscribe">
               <input type="text" placeholder="Enter your mail..." />
-              <button>Subscribe</button>
+              <button type="submit">Subscribe</button>
             </div>
           </div>
+        </div>
 
-          <div className="rights reserved">
-            <p> © 2023 Your Company Name. All rights reserved.</p>
-          </div>
-        </Footer>
-        */}
+        <div className="reserved">
+          <img src={Line4} alt="line4" />
+          <p>© 2023 Your Company Name. All rights reserved.</p>
+        </div>
+      </Footer>
     </>
   );
 }

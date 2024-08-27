@@ -14,7 +14,7 @@ export function SocialMedia() {
   const iconSize = width > 768 ? 24 : 24;
   return (
     <ContainerSocial>
-      <strong>FOLLOW US</strong>
+      
       <IconsGroup>
         <div className="twitter">
           <IoLogoTwitter size={iconSize} />

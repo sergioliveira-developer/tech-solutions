@@ -6,13 +6,13 @@ import {
   Logo,
   SocialMedia,
   QuestionBoard,
+  Footer,
 } from '../../components';
 
 import {
   ContainerBody,
   ContainerMain,
   ContainerTop,
-  Footer,
   GameCreator,
   GamingCreation,
   Header,
@@ -32,7 +32,6 @@ import PeoplesViews from '../../assets/peoples-views.svg';
 import Creator from '../../assets/creator.png';
 import Coments from '../../assets/coments.svg';
 import Line3 from '../../assets/line-3.svg';
-import Line4 from '../../assets/line-4.svg';
 
 import { PageCardsGames } from '../PageCards';
 
@@ -80,7 +79,7 @@ export function Home() {
             </div>
 
             <div className="glasses-using">
-              <div className='user-experience'>
+              <div className="user-experience">
                 <img src={UserExperience} />
                 <img src={Line3} alt="line3" />
               </div>
@@ -186,51 +185,7 @@ export function Home() {
 
       <QuestionBoard />
 
-      <Footer>
-        <div className="footer">
-          <div className="container-contact">
-            <Logo />
-
-            <SocialMedia />
-
-            <label>+351 939274154</label>
-          </div>
-
-          <div className="container-header">
-            <h3>Menu</h3>
-            <a>Home</a>
-            <a>Catalog</a>
-            <a>Contact</a>
-            <a>Features</a>
-          </div>
-
-          <div className="container-company">
-            <h3>Company</h3>
-            <a>Login</a>
-            <a>Sign Up</a>
-            <a>Privacy</a>
-            <a>Products</a>
-          </div>
-
-          <div className="container-newsletter">
-            <h3>Subscribe Our News Letter</h3>
-
-            <p>
-              Sure, please provide your email address to subscribe to newsletter
-            </p>
-
-            <div className="container-subscribe">
-              <input type="text" placeholder="Enter your mail..." />
-              <button type="submit">Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="reserved">
-          <img src={Line4} alt="line4" />
-          <p>© 2023 Your Company Name. All rights reserved.</p>
-        </div>
-      </Footer>
+      <Footer />
     </>
   );
 }

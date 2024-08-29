@@ -5,6 +5,7 @@ import { Input } from './inputs';
 import { Logo } from './logo';
 import { QuestionBoard } from './questions';
 import { SocialMedia } from './social-media';
+import { Footer } from './footer';
 
 export {
   BagIcon,
@@ -14,4 +15,5 @@ export {
   Logo,
   QuestionBoard,
   SocialMedia,
+  Footer,
 };

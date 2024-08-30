@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-import ArrowForward2 from '../../assets/arrow-forward2.svg';
-import Horizon from '../../assets/card-horizon.png';
-import Ajax from '../../assets/card-alyx.png';
-import FightNight from '../../assets/card-fight-night.png';
-import CallofDuty from '../../assets/card-call-of-duty.png';
+import ArrowForward2 from '../../../public/arrow-forward2.svg';
+import Ajax from '../../../public/card-alyx.png';
+import CallofDuty from '../../../public/card-call-of-duty.png';
+import FightNight from '../../../public/card-fight-night.png';
+import Horizon from '../../../public/card-horizon.png';
 
-import { ContainerGames, TopGames } from './styles';
 import { ContainerMain } from '../Home/styles';
+import { ContainerGames, TopGames } from './styles';
 
 export const PageCardsGames = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,6 +38,7 @@ export const PageCardsGames = () => {
       setCurrentIndex(currentIndex - 1);
     }
   };
+
   return (
     <ContainerGames>
       <ContainerMain>
@@ -78,22 +79,42 @@ export const PageCardsGames = () => {
             transform: `translateX(-${totalTranslateX}%)`,
           }}
         >
-          <div>
+          <div className="card">
             <img className="horizon" src={Horizon} />
             <h2>Horizon : Call of the mountain</h2>
           </div>
 
-          <div>
+          <div className="card">
             <img className="ajax" src={Ajax} />
-            <span>Half - Life : ALYX</span>
+            <h2>Half - Life : ALYX</h2>
           </div>
 
-          <div>
+          <div className="card">
             <img className="fight-night" src={FightNight} />
             <h2>Fight Night : Champion</h2>
           </div>
 
-          <div>
+          <div className="card">
+            <img className="call-of-duty" src={CallofDuty} />
+            <h2>Call of Duty : Cold War</h2>
+          </div>
+
+          <div className="card">
+            <img className="horizon" src={Horizon} />
+            <h2>Horizon : Call of the mountain</h2>
+          </div>
+
+          <div className="card">
+            <img className="ajax" src={Ajax} />
+            <h2>Half - Life : ALYX</h2>
+          </div>
+
+          <div className="card">
+            <img className="fight-night" src={FightNight} />
+            <h2>Fight Night : Champion</h2>
+          </div>
+
+          <div className="card">
             <img className="call-of-duty" src={CallofDuty} />
             <h2>Call of Duty : Cold War</h2>
           </div>

@@ -7,78 +7,47 @@ export const ContainerGames = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   .cards-games {
     display: flex;
-    gap: 48px;
+    gap: 48px; /* Gap de 48px entre os cards */
     width: 100%;
+    transition: transform 0.3s ease;
 
-    .horizon {
-      max-width: 448px;
-      height: auto;
-      border-radius: 4px;
+    .card {
+      cursor: pointer;
+      flex: 0 0 33%; /* Cada card ocupa 33% da largura do container */
 
       &:hover {
-        opacity: 0.8;
-        border: 3px solid rgba(189, 0, 255, 0.2);
-        transition: all 100ms;
-      }
-    }
+        transition: all 300ms;
 
-    div {
-      span {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 130%;
-        letter-spacing: -2%;
-        color: ${theme.colors.purpledark};
-      }
-
-      .ajax {
-        max-width: 448px;
-        height: auto;
-        border-radius: 4px;
-
-        &:hover {
-          opacity: 0.8;
+        img {
           border: 3px solid ${theme.colors.purpledark};
-          transition: all 100ms;
+          transition: all 300ms;
+        }
+
+        h2 {
+          color: ${theme.colors.purpledark};
+          transition: all 300ms;
         }
       }
     }
 
-    .fight-night {
-      max-width: 448px;
-      height: auto;
+    img {
+      border: 3px solid transparent;
       border-radius: 4px;
-
-      &:hover {
-        opacity: 0.8;
-        border: 3px solid rgba(189, 0, 255, 0.2);
-        transition: all 100ms;
-      }
-    }
-
-    .call-of-duty {
-      max-width: 448px;
-      height: auto;
-      border-radius: 4px;
-
-      &:hover {
-        opacity: 100%;
-        border: 3px solid rgba(189, 0, 255, 0.2);
-        transition: all 100ms;
-      }
+      width: 100%;
     }
 
     h2 {
-      max-width: 448px;
       font-weight: 700;
       font-size: 32px;
       line-height: 130%;
       letter-spacing: -2%;
       text-align: left;
       color: ${theme.colors.white};
+      transition: all 300ms;
     }
   }
 `;
@@ -128,10 +97,16 @@ export const TopGames = styled.div`
       padding: 16px;
       border-radius: 0.5rem;
       border: none;
+      cursor: pointer;
 
       &:hover {
         opacity: 0.6;
         transition: 0.5s ease-in-out;
+      }
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
       }
     }
   }

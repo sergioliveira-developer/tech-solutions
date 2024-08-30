@@ -3,6 +3,8 @@ import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const ContainerFooter = styled.footer`
+width: 100%;
+
   p,
   a {
     font-style: normal;
@@ -11,6 +13,7 @@ export const ContainerFooter = styled.footer`
     line-height: 22px;
     color: rgba(255, 255, 255, 0.8);
     text-align: left;
+    text-decoration: none;
   }
 
   h3 {
@@ -69,14 +72,6 @@ export const ContainerFooter = styled.footer`
       color: ${theme.colors.white};
 
       .container-subscribe {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0px 0px 0px 24px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 4px;
-        max-width: 446px;
-
         input {
           display: flex;
           justify-content: center;
@@ -142,5 +137,15 @@ export const ContainerFooter = styled.footer`
       line-height: 22px;
       color: rgba(255, 255, 255, 0.8);
     }
+  }
+
+  form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    max-width: 446px;
   }
 `;

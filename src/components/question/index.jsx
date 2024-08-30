@@ -1,8 +1,6 @@
 import { useState } from 'react';
-
 import ArrowDown from '../../assets/arrow-down.svg';
 import ArrowUp from '../../assets/arrow-up.svg';
-
 import { QuestionContainer } from './styles';
 
 export function Question({ title, children }) {

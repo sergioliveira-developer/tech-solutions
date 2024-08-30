@@ -23,6 +23,7 @@ export const QuestionContainer = styled.div`
 
   .title {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
     width: 100%;

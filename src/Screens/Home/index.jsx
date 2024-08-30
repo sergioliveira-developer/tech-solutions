@@ -6,13 +6,13 @@ import {
   Logo,
   SocialMedia,
   QuestionBoard,
-  Footer,
 } from '../../components';
 
 import {
   ContainerBody,
   ContainerMain,
   ContainerTop,
+  Footer,
   GameCreator,
   GamingCreation,
   Header,
@@ -20,18 +20,19 @@ import {
   SectionInformations,
 } from './styles';
 
-import ArrowForward from '../../assets/arrow-forward.svg';
-import UserExperience from '../../assets/user-experience.png';
-import EnhancedEducation from '../../assets/enhanced-education.svg';
-import TrainingSimulation from '../../assets/training-simulation.svg';
-import ArrowForward2 from '../../assets/arrow-forward2.svg';
-import BlueStar from '../../assets/blue-star.svg';
-import Explore from '../../assets/explore.svg';
-import Glasses from '../../assets/glasses.png';
-import PeoplesViews from '../../assets/peoples-views.svg';
-import Creator from '../../assets/creator.png';
-import Coments from '../../assets/coments.svg';
-import Line3 from '../../assets/line-3.svg';
+import ArrowForward from '../../../public/arrow-forward.svg';
+import UserExperience from '../../../public/user-experience.png';
+import EnhancedEducation from '../../../public/enhanced-education.svg';
+import TrainingSimulation from '../../../public/training-simulation.svg';
+import ArrowForward2 from '../../../public/arrow-forward2.svg';
+import BlueStar from '../../../public/blue-star.svg';
+import Explore from '../../../public/explore.svg';
+import Glasses from '../../../public/glasses.png';
+import PeoplesViews from '../../../public/peoples-views.svg';
+import Creator from '../../../public/creator.png';
+import Coments from '../../../public/coments.svg';
+import Line3 from '../../../public/line-3.svg';
+import Line4 from '../../../public/line-4.svg';
 
 import { PageCardsGames } from '../PageCards';
 
@@ -105,7 +106,6 @@ export function Home() {
           <div className="content">
             <div className="image">
               <img src={Glasses} />
-              {/* <img className="elipse" src={Elipse} alt="box-shadow" /> */}
             </div>
 
             <ContainerBody>
@@ -185,7 +185,51 @@ export function Home() {
 
       <QuestionBoard />
 
-      <Footer />
+      <Footer>
+        <div className="footer">
+          <div className="container-contact">
+            <Logo />
+
+            <SocialMedia />
+
+            <label>+351 939274154</label>
+          </div>
+
+          <div className="container-header">
+            <h3>Menu</h3>
+            <a>Home</a>
+            <a>Catalog</a>
+            <a>Contact</a>
+            <a>Features</a>
+          </div>
+
+          <div className="container-company">
+            <h3>Company</h3>
+            <a>Login</a>
+            <a>Sign Up</a>
+            <a>Privacy</a>
+            <a>Products</a>
+          </div>
+
+          <div className="container-newsletter">
+            <h3>Subscribe Our News Letter</h3>
+
+            <p>
+              Sure, please provide your email address to subscribe to newsletter
+            </p>
+
+            <div className="container-subscribe">
+              <input type="text" placeholder="Enter your mail..." />
+              <button type="submit">Subscribe</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="reserved">
+          <img src={Line4} alt="line4" />
+          <p>© 2023 Your Company Name. All rights reserved.</p>
+        </div>
+      </Footer>
     </>
   );
 }

@@ -21,7 +21,7 @@ export const ContainerInput = styled.div`
     border: none;
     color: ${theme.colors.purple};
     flex-grow: 1;
-    transition: all 100ms;
+    transition: all 300ms;
 
     &::placeholder {
       color: ${theme.colors.white};

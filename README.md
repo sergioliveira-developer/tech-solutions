@@ -1,4 +1,6 @@
-![Home](./public/home-tech-solutions.png)
+<div align="center" border-radius="4">
+<img src="./public/home-tech-solutions.png" alt="Initial-Session" width="400"/>
+</div>
 
 ### Desafios e Soluções
 

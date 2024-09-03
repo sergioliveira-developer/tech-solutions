@@ -2,18 +2,15 @@ import { styled } from 'styled-components';
 
 import { theme } from '../../styles/theme';
 
-export const ContainerFooter = styled.footer`
-width: 100%;
-
-  p,
-  a {
+export const FooterContainer = styled.footer`
+  p {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: rgba(255, 255, 255, 0.8);
+    max-width: 385px;
     text-align: left;
-    text-decoration: none;
   }
 
   h3 {
@@ -24,11 +21,11 @@ width: 100%;
     color: ${theme.colors.white};
   }
 
-  .container-footer {
+  .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 100px;
+    padding: 80px 256px;
     gap: 40px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
@@ -72,13 +69,21 @@ width: 100%;
       color: ${theme.colors.white};
 
       .container-subscribe {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 0px 0px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        max-width: 446px;
+
         input {
           display: flex;
           justify-content: center;
           align-items: center;
           padding: 10px;
           max-width: 138px;
-          margin-right: 130px;
+          margin-right: 152px;
           color: ${theme.colors.purple};
           border: none;
           background: none;
@@ -127,7 +132,7 @@ width: 100%;
     gap: 32px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
-    height: 132px;
+    height: auto;
 
     p {
       max-width: 348px;
@@ -137,15 +142,5 @@ width: 100%;
       line-height: 22px;
       color: rgba(255, 255, 255, 0.8);
     }
-  }
-
-  form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px 0px 0px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    max-width: 446px;
   }
 `;

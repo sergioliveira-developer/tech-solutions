@@ -6,6 +6,7 @@ import { Logo } from './logo';
 import { Question } from './question';
 import { QuestionBoard } from './questions';
 import { SocialMedia } from './social-media';
+import { Footer } from './footer';
 
 export {
   BagIcon,
@@ -16,4 +17,5 @@ export {
   Question,
   QuestionBoard,
   SocialMedia,
+  Footer,
 };

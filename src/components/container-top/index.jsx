@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import PinkStar from '../../assets/pink-star.svg';
+import PinkStar from '../../../public/pink-star.svg';
 
 import { Container } from './styles';
 

@@ -1,8 +1,8 @@
 import { Logo, SocialMedia } from '../index';
 
-import Line4 from '../../../public/line-4.svg';
-
 import { FooterContainer } from './styles';
+
+import Line4 from '../../../public/line-4.svg';
 
 export function Footer() {
   return (

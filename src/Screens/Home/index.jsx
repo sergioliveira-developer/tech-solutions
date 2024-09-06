@@ -34,8 +34,32 @@ import Coments from '../../../public/coments.svg';
 import Line3 from '../../../public/line-3.svg';
 
 import { PageCardsGames } from '../PageCards';
+import { useState, useEffect } from 'react';
 
 export function Home() {
+  const [titleColor, setTitleColor] = useState('#fff'); // Cor do título
+  const [subtitleColor, setSubtitleColor] = useState('#fff'); // Cor do subtítulo
+
+  // Função para gerar uma cor hexadecimal aleatória
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  // useEffect para definir uma nova cor do título quando a página for recarregada
+  useEffect(() => {
+    setTitleColor(getRandomColor());
+  }, []); // Executa apenas uma vez no carregamento da página
+
+  // Função para alterar a cor do subtítulo ao clicar no botão "Visit Store"
+  const changeSubtitleColor = () => {
+    setSubtitleColor(getRandomColor());
+  };
+
   return (
     <>
       <SectionInformations>
@@ -60,10 +84,18 @@ export function Home() {
 
           <ContainerTop>
             <div className="hero-text">
-              <InformationTop subtitle="Virtual Headsets" />
+              <InformationTop
+                subtitle="Virtual Headsets"
+                color={titleColor}
+                subtitleColor={subtitleColor}
+              />
 
               <div className="container-buttons">
-                <Button theme="blue" type="button">
+                <Button
+                  theme="blue"
+                  type="button"
+                  onClick={changeSubtitleColor}
+                >
                   Visit Sttore <img src={ArrowForward} alt="arrow-forward" />
                 </Button>
 

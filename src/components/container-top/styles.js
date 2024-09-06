@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -24,7 +23,7 @@ export const Container = styled.div`
     font-size: 80px;
     line-height: 120%;
     letter-spacing: -0.02em;
-    color: ${theme.colors.white};
+    color: ${({ color }) => color}; /* Usando a cor passada via props */
   }
 
   img {

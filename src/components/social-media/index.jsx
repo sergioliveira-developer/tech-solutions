@@ -12,9 +12,9 @@ import { ContainerSocial, IconsGroup } from './styles';
 export function SocialMedia() {
   const { width } = useWindowSizeIcons();
   const iconSize = width > 768 ? 24 : 24;
+
   return (
     <ContainerSocial>
-      
       <IconsGroup>
         <div className="twitter">
           <IoLogoTwitter size={iconSize} />

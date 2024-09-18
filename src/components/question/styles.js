@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-
 import { theme } from '../../styles/theme';
 
 export const QuestionContainer = styled.div`
@@ -50,6 +49,45 @@ export const QuestionContainer = styled.div`
       line-height: 150%;
       color: ${theme.colors.white};
       margin-bottom: 12px;
+    }
+  }
+
+  /* Media queries para responsividade */
+  @media (max-width: 1024px) {
+    padding: 24px 32px;
+
+    h3 {
+      font-size: 22px;
+    }
+
+    .description p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 28px;
+    gap: 8px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .description p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 16px 20px;
+    gap: 6px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .description p {
+      font-size: 12px;
     }
   }
 `;

@@ -6,7 +6,7 @@ import CallofDuty from '../../../public/card-call-of-duty.png';
 import FightNight from '../../../public/card-fight-night.png';
 import Horizon from '../../../public/card-horizon.png';
 
-import { ContainerMain } from '../Home/styles';
+import { MainContainer } from '../Home/styles';
 import { ContainerGames, TopGames } from './styles';
 
 export const PageCardsGames = () => {
@@ -41,14 +41,13 @@ export const PageCardsGames = () => {
 
   return (
     <ContainerGames>
-      <ContainerMain>
+      <MainContainer>
         <TopGames>
           <h1>Top Games</h1>
 
           <p>
-            If you buy video 2 games, you will receive 1
-            <br />
-            video game for free, along with a <span>50%</span> discount.
+            If you buy video 2 games, you will receive 1 video game for free,
+            along with a <span>50%</span> discount.
           </p>
 
           <div className="container-buttons">
@@ -119,7 +118,7 @@ export const PageCardsGames = () => {
             <h2>Call of Duty : Cold War</h2>
           </div>
         </div>
-      </ContainerMain>
+      </MainContainer>
     </ContainerGames>
   );
 };

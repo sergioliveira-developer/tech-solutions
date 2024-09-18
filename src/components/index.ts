@@ -1,5 +1,5 @@
 import { BagIcon } from './bag-icon';
-import { Button } from './buttons';
+import { Button } from './button';
 import { InformationTop } from './container-top';
 import { Input } from './inputs';
 import { Logo } from './logo';

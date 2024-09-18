@@ -11,11 +11,13 @@ import {
 
 import {
   ContainerBody,
-  ContainerMain,
   ContainerTop,
   GameCreator,
   GamingCreation,
+  HamburgerIcon,
   Header,
+  MainContainer,
+  MenuLinks,
   SectionDescription,
   SectionInformations,
 } from './styles';
@@ -37,6 +39,7 @@ import { PageCardsGames } from '../PageCards';
 import { useState, useEffect } from 'react';
 
 export function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [titleColor, setTitleColor] = useState('#fff'); // Cor do título
   const [subtitleColor, setSubtitleColor] = useState('#fff'); // Cor do subtítulo
 
@@ -60,17 +63,38 @@ export function Home() {
     setSubtitleColor(getRandomColor());
   };
 
+  // Função para alternar o estado do menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // const navLinks = [
+  //   { name: 'HOME', to: 'home' },
+  //   { name: 'ABOUT ME', to: 'aboutme' },
+  //   { name: 'PROJECTS', to: 'projects' },
+  //   { name: 'SKILLS', to: 'skills' },
+  //   { name: 'CONTACT', to: 'contact' },
+  // ];
+
   return (
     <>
       <SectionInformations>
-        <ContainerMain>
+        <MainContainer>
           <Header>
-            <div className="links">
-              <a>Home</a>
-              <a>Catalog</a>
-              <a>Contact</a>
-              <a>Features</a>
-            </div>
+            {/* Menu Links (mostrado ou escondido com base no estado) */}
+            <MenuLinks menuOpen={menuOpen}>
+              {['Home', 'Catalog', 'Contact', 'Features'].map((text) => (
+                <a key={text} href={`#${text.toLowerCase()}`}>
+                  {text}
+                </a>
+              ))}
+            </MenuLinks>
+
+            <HamburgerIcon onClick={toggleMenu}>
+              <span />
+              <span />
+              <span />
+            </HamburgerIcon>
 
             <div className="logo">
               <Logo />
@@ -80,6 +104,8 @@ export function Home() {
               <Input placeholder="Search games & products.." />
               <BagIcon />
             </div>
+
+            {/* Botão de hambúrguer para telas pequenas */}
           </Header>
 
           <ContainerTop>
@@ -105,7 +131,7 @@ export function Home() {
               </div>
 
               <div className="follow-us">
-                <strong>FOLLOW US</strong>
+                <h4>FOLLOW US</h4>
                 <SocialMedia />
               </div>
             </div>
@@ -129,11 +155,11 @@ export function Home() {
               </div>
             </div>
           </ContainerTop>
-        </ContainerMain>
+        </MainContainer>
       </SectionInformations>
 
       <SectionDescription>
-        <ContainerMain>
+        <MainContainer>
           <div className="content">
             <div className="image">
               <img src={Glasses} />
@@ -180,11 +206,11 @@ export function Home() {
               </div>
             </ContainerBody>
           </div>
-        </ContainerMain>
+        </MainContainer>
       </SectionDescription>
 
       <GamingCreation>
-        <ContainerMain>
+        <MainContainer>
           <div className="content">
             <GameCreator>
               <h1>Jane Wilson, Gaming Creator</h1>
@@ -209,7 +235,7 @@ export function Home() {
               <img className="coments" src={Coments} alt="people coments" />
             </div>
           </div>
-        </ContainerMain>
+        </MainContainer>
       </GamingCreation>
 
       <PageCardsGames />

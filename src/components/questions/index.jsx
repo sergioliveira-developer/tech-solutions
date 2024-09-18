@@ -1,11 +1,11 @@
-import { ContainerMain } from '../../Screens/Home/styles';
+import { MainContainer } from '../../Screens/Home/styles';
 import { Question } from '../question';
 import { ContainerQuestions } from './styles';
 
 export function QuestionBoard() {
   return (
     <ContainerQuestions>
-      <ContainerMain>
+      <MainContainer>
         <div className="title">
           <h1>F.A.Q</h1>
         </div>
@@ -68,7 +68,7 @@ export function QuestionBoard() {
             sunt cumque. Saepe?
           </p>
         </Question>
-      </ContainerMain>
+      </MainContainer>
     </ContainerQuestions>
   );
 }

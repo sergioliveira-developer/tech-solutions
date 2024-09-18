@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
-export const ButtonSource = styled.button`
+export const SourceButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,6 @@ export const ButtonSource = styled.button`
   background: none;
   border: none;
   color: ${theme.colors.white};
-  padding: 0;
 
   svg {
     height: 1.375rem;

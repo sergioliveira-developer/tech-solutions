@@ -1,10 +1,10 @@
-import { ButtonSource } from './styles';
+import { SourceButton } from './styles';
 import { MagnifyingGlass } from '@phosphor-icons/react';
 
-export const ButtonIcon = function ({ ...props }) {
+export const SourceIcon = function ({ ...props }) {
   return (
-    <ButtonSource {...props}>
+    <SourceButton {...props}>
       <MagnifyingGlass />
-    </ButtonSource>
+    </SourceButton>
   );
 };

@@ -1,11 +1,11 @@
-import { ButtonIcon } from '../button-icon';
-import { ContainerInput } from './styles';
+import { SourceIcon } from '../button-icon';
+import { InputContainer } from './styles';
 
 export const Input = function ({ ...props }) {
   return (
-    <ContainerInput>
+    <InputContainer>
       <input {...props} />
-      <ButtonIcon />
-    </ContainerInput>
+      <SourceIcon />
+    </InputContainer>
   );
 };

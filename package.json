@@ -1,6 +1,6 @@
 {
   "name": "tech-solutions",
-  "private": "false",
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
@@ -10,10 +10,7 @@
     "preview": "vite preview"
   },
   "keywords": [],
-  "author": {
-    "name": "Sérgio Oliveira",
-    "url": "https://github.com/sergioliveira-developer"
-  },
+  "author": "Sérgio Oliveira (https://github.com/sergioscker)",
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",
     "prop-types": "^15.8.1",
@@ -29,5 +26,8 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "prettier": "^3.3.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/sergioscker/tech-solutions.git",
+  "license": "MIT"
 }

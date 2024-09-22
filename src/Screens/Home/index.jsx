@@ -1,5 +1,6 @@
+import { useState } from 'react';
+
 import {
-  BagIcon,
   Button,
   InformationTop,
   Input,
@@ -30,42 +31,22 @@ import ArrowForward2 from '../../../public/arrow-forward2.svg';
 import BlueStar from '../../../public/blue-star.svg';
 import Explore from '../../../public/explore.svg';
 import Glasses from '../../../public/glasses.png';
+import Arcle from '../../../public/arcle.svg';
 import PeoplesViews from '../../../public/peoples-views.svg';
 import Creator from '../../../public/creator.png';
 import Coments from '../../../public/coments.svg';
 import Line3 from '../../../public/line-3.svg';
 
 import { PageCardsGames } from '../PageCards';
-import { useState, useEffect } from 'react';
+
+import { IoClose, IoMenu } from 'react-icons/io5';
 
 export function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [titleColor, setTitleColor] = useState('#fff'); // Cor do título
-  const [subtitleColor, setSubtitleColor] = useState('#fff'); // Cor do subtítulo
-
-  // Função para gerar uma cor hexadecimal aleatória
-  const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
-  // useEffect para definir uma nova cor do título quando a página for recarregada
-  useEffect(() => {
-    setTitleColor(getRandomColor());
-  }, []); // Executa apenas uma vez no carregamento da página
-
-  // Função para alterar a cor do subtítulo ao clicar no botão "Visit Store"
-  const changeSubtitleColor = () => {
-    setSubtitleColor(getRandomColor());
-  };
 
   // Função para alternar o estado do menu
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(!menuOpen); // Função para abrir/fechar o menu
   };
 
   // const navLinks = [
@@ -82,18 +63,23 @@ export function Home() {
         <MainContainer>
           <Header>
             {/* Menu Links (mostrado ou escondido com base no estado) */}
-            <MenuLinks menuOpen={menuOpen}>
+            <MenuLinks isopen={menuOpen}>
+              <IoClose className="close-icon" size={28} onClick={toggleMenu} />
+
               {['Home', 'Catalog', 'Contact', 'Features'].map((text) => (
-                <a key={text} href={`#${text.toLowerCase()}`}>
+                <a
+                  key={text}
+                  href={`#${text.toLowerCase()}`}
+                  onClick={() => setMenuOpen(false)} // Fecha o menu ao clicar em um link
+                >
                   {text}
                 </a>
               ))}
             </MenuLinks>
 
-            <HamburgerIcon onClick={toggleMenu}>
-              <span />
-              <span />
-              <span />
+            <HamburgerIcon isopen={menuOpen} onClick={toggleMenu}>
+              {!menuOpen ? <IoMenu size={28} /> : ''}
+              {/* Mostra o ícone de hambúrguer quando o menu está fechado */}
             </HamburgerIcon>
 
             <div className="logo">
@@ -101,27 +87,16 @@ export function Home() {
             </div>
 
             <div className="search">
-              <Input placeholder="Search games & products.." />
-              <BagIcon />
+              <Input placeholder="Search games & products..." />
             </div>
-
-            {/* Botão de hambúrguer para telas pequenas */}
           </Header>
 
           <ContainerTop>
             <div className="hero-text">
-              <InformationTop
-                subtitle="Virtual Headsets"
-                color={titleColor}
-                subtitleColor={subtitleColor}
-              />
+              <InformationTop subtitle="Virtual Headsets" />
 
               <div className="container-buttons">
-                <Button
-                  theme="blue"
-                  type="button"
-                  onClick={changeSubtitleColor}
-                >
+                <Button theme="blue" type="button">
                   Visit Sttore <img src={ArrowForward} alt="arrow-forward" />
                 </Button>
 
@@ -162,11 +137,17 @@ export function Home() {
         <MainContainer>
           <div className="content">
             <div className="image">
-              <img src={Glasses} />
+              <img
+                className="virtual-glasses"
+                src={Glasses}
+                alt="virtual-glasses"
+              />
+              <img className="arcle-icon" src={Arcle} alt="arcle-background" />
             </div>
 
             <ContainerBody>
               <h1>Our Virtual Headsets Shine with Unique Features!</h1>
+
               <div className="infos">
                 <div className="high-resolution">
                   <img src={BlueStar} />

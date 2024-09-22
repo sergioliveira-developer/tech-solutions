@@ -25,6 +25,7 @@ export const FooterContainer = styled.footer`
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 12px;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.8;
@@ -126,6 +127,10 @@ export const FooterContainer = styled.footer`
     padding: 20px;
     gap: 20px;
     background: rgba(255, 255, 255, 0.05);
+
+    img {
+      max-width: 1410px;
+    }
 
     p {
       font-size: 18px;

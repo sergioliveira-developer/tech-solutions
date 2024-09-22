@@ -8,6 +8,7 @@ export const ContainerGames = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 
   .cards-games {
     display: flex;
@@ -89,8 +90,8 @@ export const TopGames = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    gap: 24px; /* Espaçamento entre os elementos */
-    padding: 40px 0; /* Reduzir padding em telas menores */
+    gap: 24px;
+    padding: 40px 0;
   }
 
   h1 {
@@ -111,14 +112,14 @@ export const TopGames = styled.div`
   }
 
   p {
-    max-width: 341px;
+    max-width: 351px;
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0%;
     text-align: left;
-    color: ${theme.colors.white};
+    color: rgba(255, 255, 255, 0.6);
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -126,7 +127,6 @@ export const TopGames = styled.div`
 
     @media (max-width: 480px) {
       font-size: 16px;
-      max-width: 345px;
     }
 
     span {

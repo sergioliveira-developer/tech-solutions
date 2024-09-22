@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const Container = styled.div`
   display: flex;
@@ -13,17 +14,17 @@ export const Container = styled.div`
     line-height: 22px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   h1 {
     max-width: 560px;
     font-style: normal;
     font-weight: 700;
-    font-size: 80px; /* Tamanho grande para telas maiores */
+    font-size: 80px; 
     line-height: 120%;
     letter-spacing: -0.02em;
-    color: ${({ color }) => color}; /* Usando a cor passada via props */
+    color: ${theme.colors.white}
   }
 
   img {
@@ -44,7 +45,7 @@ export const Container = styled.div`
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   /* Ajustes de responsividade para telas menores */

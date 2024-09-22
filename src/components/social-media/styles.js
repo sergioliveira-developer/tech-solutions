@@ -12,6 +12,7 @@ export const IconsGroup = styled.div`
   display: flex;
   gap: 12px;
   width: 100%;
+  cursor: pointer;
 
   .twitter {
     display: flex;

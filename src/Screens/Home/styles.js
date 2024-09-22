@@ -8,23 +8,6 @@ const device = {
   small: '@media (max-width: 768px)', // Telas pequenas
 };
 
-export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1400px;
-  width: 100%;
-  padding: 0 12px;
-  z-index: 2;
-
-  ${device.medium} {
-    padding: 0 24px;
-  }
-
-  ${device.small} {
-    padding: 0 16px;
-  }
-`;
-
 export const SectionInformations = styled.section`
   display: flex;
   flex-direction: column;
@@ -40,57 +23,21 @@ export const SectionInformations = styled.section`
   }
 `;
 
-export const HamburgerIcon = styled.div`
-  display: none; /* Escondido em telas grandes */
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-
-  span {
-    width: 30px;
-    height: 3px;
-    background: ${theme.colors.white};
-    transition: 0.4s ease;
-  }
-
-  ${device.small} {
-    display: flex; /* Mostrado apenas em telas pequenas */
-  }
-`;
-
-export const MenuLinks = styled.div`
+export const MainContainer = styled.div`
   display: flex;
-  align-items: center;
-  gap: 32px;
-  flex: 2; /* Espaço flexível para as opções de menu */
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 12px;
+  z-index: 2;
+  overflow: hidden;
 
-  a {
-    font-size: 16px;
-    font-weight: 400;
-    color: ${theme.colors.white};
-    transition: color 0.5s ease-in-out;
-    text-decoration: none;
-
-    &:hover {
-      color: ${theme.colors.error};
-    }
+  ${device.medium} {
+    padding: 0 24px;
   }
 
-  /* Para telas pequenas, o menu se torna uma coluna */
   ${device.small} {
-    display: ${(props) => (props.menuOpen ? 'flex' : 'none')};
-    flex-direction: column;
-    width: 100%; /* O menu ocupa toda a largura disponível */
-    max-width: 300px;
-    background-color: ${theme.colors.background}; /* Cor de fundo para o menu */
-    padding: 16px;
-    gap: 16px; /* Espaçamento entre os links no menu hamburguer */
-
-    a {
-      font-size: 18px;
-      color: ${theme.colors.white};
-      padding: 10px 0;
-    }
+    padding: 0 16px;
   }
 `;
 
@@ -105,14 +52,14 @@ export const Header = styled.header`
   .logo {
     width: 98px;
     height: 28px;
-    flex: 1; /* A logo ocupa um espaço proporcional */
+    flex: 1;
   }
 
   .search {
     display: flex;
     align-items: center;
     gap: 24px;
-    flex: 2; /* A barra de busca ocupa mais espaço em telas maiores */
+    flex: 1;
   }
 
   ${device.medium} {
@@ -124,18 +71,84 @@ export const Header = styled.header`
     gap: 12px;
     flex-wrap: nowrap;
 
-    .logo {
-      flex: 1;
-    }
-
     .search {
-      flex: 1;
-      justify-content: flex-end;
-
       input {
         display: none; /* Escondemos a barra de busca em telas pequenas */
       }
     }
+  }
+`;
+
+export const MenuLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: 100;
+  flex: 2;
+
+  .close-icon {
+    display: none; /* Oculta o ícone de fechar em telas grandes */
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.5s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+      color: ${theme.colors.lightpurple};
+    }
+  }
+
+  ${device.medium} {
+    display: none; /* Oculta o menu em telas médias e grandes */
+  }
+
+  /* Para telas pequenas, o menu se torna uma coluna */
+  ${device.small} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    transform: translateX(
+      ${({ isopen }) => (isopen ? '0' : '-100%')}
+    ); /* Move para fora da tela se não estiver aberto */
+
+    .close-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: ${theme.colors.white};
+
+      &:hover {
+        color: ${theme.colors.purpledark};
+      }
+    }
+  }
+`;
+
+export const HamburgerIcon = styled.div`
+  display: none;
+  gap: 6px;
+
+  &:hover {
+    color: ${theme.colors.purpledark};
+  }
+
+  ${device.small} {
+    display: flex;
+    flex: 1;
+    color: ${theme.colors.lightpurple};
   }
 `;
 
@@ -206,8 +219,7 @@ export const ContainerTop = styled.div`
         line-height: 27px;
         color: ${theme.colors.neutral};
 
-        &:hover,
-        img {
+        &:hover {
           opacity: 0.8;
         }
       }
@@ -221,6 +233,7 @@ export const ContainerTop = styled.div`
 
       .container-buttons {
         flex-direction: column;
+
         gap: 10px;
       }
     }
@@ -277,54 +290,82 @@ export const SectionDescription = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
-    padding: 50px 0;
+    gap: 32px;
+    padding: 60px 0;
     width: 100%;
 
     .image {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 450px;
       width: 100%;
-      height: auto;
 
-      img {
-        max-width: 800px;
-        min-height: auto;
+      .virtual-glasses {
+        position: relative;
+        z-index: 2;
+        max-width: 65%;
+        width: 100%;
+        height: auto;
+      }
+
+      .arcle-icon {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        height: auto;
       }
     }
+  }
 
-    ${device.medium} {
-      padding: 40px 0;
-      flex-direction: column-reverse; /* Inverte a ordem da imagem e do ContainerBody */
-      align-items: center;
+  /* Ajustes para telas médias */
+  ${device.medium} {
+    padding: 40px 0;
+    justify-content: center;
+
+    .content {
+      flex-direction: column-reverse;
+    }
+
+    .image {
+      max-width: 500px; /* Limita a largura em telas médias */
+
+      .virtual-glasses {
+        max-width: 100%; /* Ocupa 100% do contêiner */
+        height: auto; /* Mantém a proporção */
+      }
+
+      .arcle-icon {
+        max-width: 100%; /* Limita o tamanho do ícone */
+        height: auto; /* Mantém a proporção */
+      }
+    }
+  }
+
+  /* Ajustes para telas pequenas */
+  ${device.small} {
+    .content {
+      padding: 25px;
+      gap: 20px;
+      flex-direction: column-reverse;
       justify-content: center;
     }
 
-    ${device.small} {
-      padding: 20px 0;
-      flex-direction: column-reverse; /* Inverte a ordem em telas pequenas também */
-      align-items: center;
-      justify-content: center;
+    .image {
+      margin: auto;
 
-      .content {
-        display: flex;
-        flex-direction: column; /* Garante que tudo fique em coluna */
+      .virtual-glasses {
+        max-width: 280px;
+        height: auto;
       }
 
-      .image {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 80px;
-
-        width: 324px;
-        height: 230px;
-
-        img {
-          width: 500px;
-        }
+      .arcle-icon {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -333,7 +374,7 @@ export const SectionDescription = styled.div`
 export const ContainerBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 80px 0;
   gap: 40px;
   width: 100%;
   max-width: 704px;
@@ -369,8 +410,8 @@ export const ContainerBody = styled.div`
     }
 
     ${device.small} {
-      flex-direction: column; /* Coloca os itens em coluna */
-      gap: 16px; /* Reduz o espaçamento em telas pequenas */
+      flex-direction: column;
+      gap: 16px;
 
       div {
         flex-basis: 100%; /* Cada item ocupa 100% da largura */
@@ -399,7 +440,7 @@ export const ContainerBody = styled.div`
     color: ${theme.colors.white};
 
     ${device.small} {
-      font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
+      font-size: 14px;
     }
   }
 
@@ -452,23 +493,27 @@ export const GamingCreation = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
+    height: auto;
+    margin-top: 40px;
 
     .people {
       width: 100%;
-      max-width: 700px;
+      max-width: 690px;
+      object-fit: cover;
     }
 
     .coments {
       position: absolute;
-      max-width: 416px;
-      left: -30px;
-      bottom: -40px;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      max-width: 414px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      left: -50px;
+      bottom: -20px;
+      box-shadow: 0px 0.33px 0px #ced5dc;
 
       ${device.small} {
-        left: 0;
-        bottom: -20px;
-        max-width: 300px;
+        display: none;
       }
     }
   }
@@ -478,6 +523,7 @@ export const GameCreator = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   gap: 40px;
 
   h1 {

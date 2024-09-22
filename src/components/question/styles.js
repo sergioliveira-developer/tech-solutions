@@ -47,7 +47,7 @@ export const QuestionContainer = styled.div`
       font-weight: 400;
       font-size: 18px;
       line-height: 150%;
-      color: ${theme.colors.white};
+      color: rgba(255, 255, 255, 0.6);
       margin-bottom: 12px;
     }
   }

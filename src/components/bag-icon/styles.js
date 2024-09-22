@@ -1,15 +1,12 @@
 import { styled } from 'styled-components';
-import { theme } from '../../styles/theme';
 
 export const ContainerBag = styled.button`
-  left: 1642px;
-  top: 60px;
   background: none;
   border: none;
-  color: ${theme.colors.white};
+  color: rgba(255, 255, 255, 0.6);
 
   svg {
-    height: 1.375rem;
-    width: 1.375rem;
+    height: 22px;
+    width: 22px;
   }
 `;

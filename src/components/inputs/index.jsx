@@ -1,11 +1,16 @@
+import { BagIcon } from '../bag-icon';
 import { SourceIcon } from '../button-icon';
-import { InputContainer } from './styles';
+import { Container, InputContainer } from './styles';
 
 export const Input = function ({ ...props }) {
   return (
-    <InputContainer>
-      <input {...props} />
-      <SourceIcon />
-    </InputContainer>
+    <Container>
+      <InputContainer>
+        <input {...props} />
+
+        <SourceIcon />
+      </InputContainer>
+      <BagIcon />
+    </Container>
   );
 };

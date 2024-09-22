@@ -348,7 +348,7 @@ export const SectionDescription = styled.div`
   /* Ajustes para telas pequenas */
   ${device.small} {
     .content {
-      padding: 25px;
+      padding: 20px;
       gap: 20px;
       flex-direction: column-reverse;
       justify-content: center;
@@ -510,7 +510,6 @@ export const GamingCreation = styled.div`
       object-fit: cover;
       left: -50px;
       bottom: -20px;
-      box-shadow: 0px 0.33px 0px #ced5dc;
 
       ${device.small} {
         display: none;
@@ -537,13 +536,13 @@ export const GameCreator = styled.div`
   }
 
   p {
-    width: 568px;
-    height: 48px;
+    max-width: 568px;
+    min-height: 48px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
-    color: ${theme.colors.white};
+    color: rgba(255, 255, 255, 0.6);
   }
 
   button {
@@ -585,6 +584,7 @@ export const GameCreator = styled.div`
 
   ${device.small} {
     padding: 0 20px;
+    gap: 20px;
 
     h1 {
       font-size: 24px;

@@ -31,6 +31,8 @@ I am extremely satisfied to have completed this project, which not only expanded
 🇵🇹 🇧🇷 
 <h2>Desafios e Soluções:</h2>
 
+Desenvolvi uma Landing Page para Headsets Virtuais usando React.js, com estilização feita através da biblioteca styled-components. Este projeto foi um grande desafio, principalmente devido ao envolvimento de múltiplas seções, imagens, botões, campos de entrada e, mais importante, a criação de cards interativos. 🎮
+
 📐 **Organização das Múltiplas Seções**  
 A principal dificuldade no desenvolvimento deste projeto foi organizar as várias seções do site de maneira coerente e funcional. A utilização do flexbox foi fundamental para garantir que todos os containers fossem dispostos corretamente, respeitando o design especificado no Figma.
 
